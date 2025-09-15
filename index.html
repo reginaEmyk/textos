@@ -14,22 +14,23 @@
       --muted:#9aa3ad;
       --accent:#6bd3ff;
       --max-width:98vw;
-      --gap:28px;
+      --gap:20px;
     }
     /* Basic reset */
     *{box-sizing:border-box}
     html,body{height:100%;}
     body{
       margin:0;
-      font-family: 'Ubuntu', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-family: sans-serif;
       background:var(--bg);
-      color: #fff;
+      color:#fff;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
-      font-size:18px;
-      letter-spacing:0.2px; /* slightly increased for readability */
+      font-size:20px;
+      letter-spacing:0.2px;
     }
+    
 
     /* Container that limits width and centers the content column */
     .section{
@@ -37,13 +38,13 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:48px 20px;
+      padding:20px 10px;
       position:relative;
       overflow:hidden;
     }
 
     .layout{
-      width:100%;
+      width:98%;
       max-width:var(--max-width);
       display:grid;
       grid-template-columns: 500px 1fr 500px; /* left image, center text, right image */
@@ -73,7 +74,7 @@
 
     /* words that link to images */
     a.word-link{
-      color:var(--accent);
+      color:white;
       text-decoration:underline;
       text-underline-offset:4px;
       outline: none;
@@ -107,13 +108,20 @@
 
     /* small captions below side images */
     .caption{font-size:.9rem;color:var(--muted); margin-top:8px}
+    .big-caption{font-size:18px;color:var(--muted); margin-top:8px}
 
     /* responsive: stack images above/below on narrow screens */
     @media (max-width:880px){
       .layout{grid-template-columns:1fr; grid-auto-rows:auto}
       .side-image{height:220px}
     }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0; /* optional spacing */
+    }
 
+    
     /* footer */
     footer{padding:28px 20px; text-align:center; color:var(--muted)}
 
@@ -131,13 +139,30 @@
       <div class="left">
         <!-- replace src with your image path; alt text required -->
         <img id="img-left-1" class="side-image" src="https://comicvine.gamespot.com/a/uploads/scale_large/6/66303/1871221-screen_capture_6.png" alt="Description of left image 1">
-        <div class="caption">Zatanna </div>
+        <div class="big-caption">Zatanna </div>
       </div>
 
-      <div class="content">
+      <div class="content" style="align-items: center;">
         <h1>Memorial de Leitura e Escrita, Regina Emy</h1>
-        <p class="lead">Traduzo letras que não consigo ler, e assim vislumbro o poder do texto visual. Obras aqui me fazem grata, no passado ou presente, por conseguir lê-las. Porém, documentos, contratos e informações de alta influência na vida é o que realmente me faz grata pela leitura e escrita. Imagina encontrar um banheiro sem placa. Ou fechar uma contrato com palavras orais e mutáveis 💀 </p>
+        <!-- <p class="lead">Traduzo letras que não consigo ler, e assim vislumbro o poder do texto visual. Obras aqui me fazem grata, no passado ou presente, por conseguir lê-las. Porém, documentos, contratos e informações de alta influência na vida é o que realmente me faz grata pela leitura e escrita. Imagina encontrar um banheiro sem placa. Ou fechar uma contrato com palavras orais e mutáveis 💀 </p> -->
+        <p class="">A leitura transmite mundos e a escrita os apresenta. Em redes sociais, meios acadêmico-profissionais, e na sinalização de lugares: o texto é obíquo na vida e transmitem diferentes vidas. Assim, ler e escrever fazem a riqueza de viver. Obras aqui me fazem grata, no passado ou presente, por conseguir ler. 
+        </p> <!-- , e marcaram minha vida </p> -->
 
+
+      <p class="video-wrapper">
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5oQVTnq-UKk?si=DPn7iMhiDgAo6Lqy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <div class="big-caption">Das minhas memórias mais jovens, fiz a infância lendo traduções de músicas das divas pop. Essa música referencia Cher ao dizer que dentro de si há toda riqueza necessária para seu lazer e satisfação. Neste memorial, a leitura e escrita são vistas como uma riqueza de vida.
+          
+          <!-- eque te traz acesso à novas vidas-- porque é parte intrínseca, consegue mudar e permite vislumbrar outras vidas.   -->
+          
+          <!-- não precisa de outra pessoa para ,  Hoje, de alguma forma mas permaneço , revezava o computador com meu irmão, para ler letras de música, e  Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos.  -->
+        </div>
+
+        <!-- <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div> -->
+        <!-- <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div> -->
+      </p>
         <!--  a dificuldade da vida analfabeta,
          <p>More content — call out a <a href="#" class="word-link" data-target="img-right-1">key phrase</a> or name. The links are keyboard accessible and trigger visual highlights on the side images so readers who rely on visual mapping can find context quickly.</p> -->
  
@@ -151,7 +176,7 @@
     </div>
 
       <div class="right">
-        <img id="img-right-1" class="side-image" src="https://avasdemon.com/pages/0001.png" alt="Description of right image 1">
+        <img id="img-right-1" class="side-image" src="https://avasdemon.com/pages/0001.png" alt="https://avasdemon.com/pages/0001.png">
         <div class="caption">Ava's demon</div>
       </div>
     </div>
@@ -169,17 +194,17 @@
       
       <div class="content" style="border: 2px solid red; border-radius:12px; padding:24px; box-shadow:0 8px 30px rgba(0,0,0,0.6); background:rgba(11,11,13,0.72);">
         <strong>2018, 3º Ensino médio - último ano de vestibular</strong>
-        <p>Não lembro minha nota de redação no enem ou no PAS UnB. Lembro que fui tão mal na redação da escola que a professora disse -- percebi que tem um processo de desaprender a escrita no ensino médio. 
-          Tais palavras aplicavam-se a mim, que tirava boas notas em redação no ensino fundamental, até gradativamente piorar a escrita quando a cobrança diminuiu. Nas férias não mais jogava videogame-- talvez, lia muita fanfiction. Nem me lembro. Mas com o retorno do ano letivo e da cobrança intensificada, minha nota final da primeira etapa letiva foi 30% - 40%.
-          O ano inteiro, escrevi todos textos da monitoria de redação, reescrevi vários, com o pescoço no fio tentando recuperar nota. No começo eram 3h pra um texto na monitoria. No fim de 2018, minha redação no PAS foi 80% (vi agora). 
+        <p>Não lembro minha nota de redação no enem ou no PAS UnB. Lembro que fui tão mal na redação da escola que a professora disse -- percebi que tem um processo de desaprender a escrita no ensino médio. </p>
+          <p>Tais palavras aplicavam-se a mim, que tirava boas notas em redação no ensino fundamental, até gradativamente piorar a escrita quando a cobrança diminuiu. Nas férias não mais jogava videogame-- talvez, lia muita fanfiction. Nem me lembro. Mas com o retorno do ano letivo e da cobrança intensificada, minha nota final da primeira etapa letiva foi 30% - 40%.</p>
+          <p>O ano inteiro, escrevi todos textos da monitoria de redação, reescrevi vários, com o pescoço no fio tentando recuperar nota. No começo eram 3h pra um texto na monitoria. No fim de 2018, minha redação no PAS foi 80% (vi agora). </p>
              
              <p>Ficava até 22:30 na escola pra aula extra e optativa em redação -- um dia, cheguei sem fazer o exercício de casa:</p>
              <p>Professora (Amanda, tudo de bom pra ela): Você fez o texto? </p>
              <p>Eu: Não</p>
              <p>Prof: Gosto de gente assim, honesta. Alguém fez? Então mostre seu texto pra gente</p>
              
-               Entendi que ela queria me ajudar com uma avaliação da minha escrita, mas como eu não fiz, convidou a ler o texto da aula para a sala. 
-               Achei fofo e genuíno. Eu sou muito tímida, então aquela atividade me fez bem pra pular além da ansiedade social, ler, e manter engajada na aula. Ótima professora. Aqui, remeto positivamente das leituras na aula de prática de textos.
+               <p>Entendi que ela queria me ajudar com uma avaliação da minha escrita, mas como eu não fiz, convidou a ler o texto da aula para a sala. </p>
+               <p>Achei fofo e genuíno. Eu sou muito tímida, então aquela atividade me fez bem pra pular além da ansiedade social, ler, e manter engajada na aula. Ótima professora. Aqui, remeto positivamente das leituras na aula de prática de textos.</p>
          </p>
       </div>
 
@@ -211,9 +236,11 @@
       </div>
 
       <div class="right">
-        
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5oQVTnq-UKk?si=DPn7iMhiDgAo6Lqy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div>
+        <iframe width="500" height="315" src="https://www.youtube-nocookie.com/embed/C5IYtMVhU8w?si=5xIrAfrG-DU90ob8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso vejo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. Por exemplo, essa letra descreve a viagem pela ficção, onde a protagonista pode viver em outros mundos. </div>
+        <!-- <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div> -->
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5oQVTnq-UKk?si=DPn7iMhiDgAo6Lqy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div> -->
           <!-- <div class="caption">Não entendo o que falam, mas assim como passei a infância, leio a tradução depois: passo horas lendo em esferas de fãs de música. Por isso digo que ler e escrever é conhecer e participar de sociadade -- cada niche é um mundo, e permaneço explorando a galáxia pelos textos. </div> -->
       </div>
     </div>
@@ -222,7 +249,7 @@
   <footer>
     <p><small>Notas ignoráveis:</small></p>
     <p><small>Texto deu um trabalhão, mas foi uma experiência positiva. A parte da colagem é bem interessante. Jogar idéias principais é mais simples do que conectá-las coerentemente-- quero mudá-lo fundamentalmente e editar detalhes, aumentar concisão, cada vez que releio. Pensei e desenvolvi várias idéias descartadas, mas isso é parte de desenvolver e concretizá-las.</small></p>
-    <p><small>A parte do ensino médio está sem colagem, apenas o fundo escuro, refletindo a escuridão da época e a necessidade de melhorar em redação 👍 </small></p>
+    <p><small>A parte do ensino médio está sem colagem, refletindo a escuridão da época e a necessidade de melhorar em redação 👍 </small></p>
   </footer>
 
   <script>
